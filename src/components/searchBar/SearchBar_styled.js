@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContainerSearchBar = styled(motion.div)`
+
     height:100vh;
+   ${props=> props.noBlock == true ? "height:auto;" : null}
     width:100%;
     position:absolute;  
     z-index:3;
