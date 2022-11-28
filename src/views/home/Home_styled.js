@@ -19,7 +19,6 @@ export const HeaderHome = styled.header`
       background-color: ${huesSec.sec02};
    }
    > :last-child {
-      position: absolute;
       bottom: 0;
       margin-bottom: -3vh;
    }
@@ -35,6 +34,8 @@ export const SearchBarHome = styled.div`
    align-items: center;
    > :last-child {
       height: 6vh;
+      position:absolute;
       scale: 0.8;
+      z-index:2;
    }
 `;

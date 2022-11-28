@@ -4,6 +4,7 @@ import { ContainerHome, HeaderHome, SearchBarHome } from "./Home_styled";
 import NavBar from "../../components/navBar/NavBar";
 import SearchBar from "../../components/searchBar/SearchBar";
 import FilterForStars from "../../components/filterForStars/FilterForStars";
+import CategoryBox from "../../components/categoryBox/CategoryBox";
 
 const Home = () => {
    const [navOrSearch, setNavOrSearch] = useState(false);
@@ -33,6 +34,7 @@ const Home = () => {
             <SearchBarHome>
                <SearchBar inBody={true}></SearchBar>
             </SearchBarHome>
+            <CategoryBox></CategoryBox>
          </ContainerHome>
       </React.Fragment>
    );
