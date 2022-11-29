@@ -8,6 +8,7 @@ export const GeneralSection = styled.section`
     height: 25vh;
     border: 2px solid black;
     border-bottom:none;
+    cursor: pointer;
 `;
 export const GeneralDiv = styled.div`
     width: 100%;

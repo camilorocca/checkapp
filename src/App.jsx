@@ -5,7 +5,11 @@ import SingleApp from './components/SingleApp/SingleApp.jsx';
 function App() {
   return (
     <div className="App">
-      <SingleApp/>
+      <Router>
+      
+
+
+      </Router>
     </div>
   );
 }

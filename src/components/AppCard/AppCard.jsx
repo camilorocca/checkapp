@@ -16,11 +16,19 @@ import {
 const AppCard = () => {
   const datos = data.data.apps;
 
+function InfoApp (name){
+  
+}
+
+  
+
   return (
     <div>
       {datos.map((items) => {
         return <GeneralSection>
-          <GeneralDiv>
+          <GeneralDiv  onClick={
+          ()=>InfoApp (items.app_id)
+        }>
             <IconImg>
               <Trailer>{items.trailer}</Trailer>  
               <Imge src={items.app_icon} />

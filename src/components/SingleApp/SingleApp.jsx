@@ -13,11 +13,14 @@ import {
   DisplayImage,
 } from "./SingleApp_Style";
 
-const SingleApp = () => {
+const SingleApp = ({dataApp}) => {
+
+  console.log(dataApp);
+
+
   return (
     <div>
-   
-      return<SectionSingle>
+      <SectionSingle>
         <AppSingle>
           <AppIcon>
             <Icon ></Icon>
@@ -39,14 +42,8 @@ const SingleApp = () => {
           </AppInfo>
         </AppSingle>
 
-        <div className="des">
+        <div>
           <p>
-            Lorem fistrum qué dise usteer quietooor papaar papaar. Pecador ese
-            que llega tiene musho peligro no puedor pecador. Me cago en tus
-            muelas está la cosa muy malar de la pradera al ataquerl benemeritaar
-            diodeno pupita mamaar. Llevame al sircoo quietooor pupita diodeno
-            mamaar apetecan me cago en tus muelas. Amatomaa diodenoo no puedor
-            pecador diodenoo qué dise usteer.
           </p>
         </div>
 
