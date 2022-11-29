@@ -23,6 +23,12 @@ export const RowCategoryBox = styled.div`
     border: 2px solid black;
     background-color: white;
     font-size: 1.5rem;
+    cursor:pointer;
+    &:active{
+      background-color: #d7d7d7;
+      scale:0.9;
+
+    }
     > svg {
       padding: 0 0.5rem 0 0.5rem;
       font-size: 2rem;
