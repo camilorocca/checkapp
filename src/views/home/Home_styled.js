@@ -20,7 +20,7 @@ export const HeaderHome = styled.header`
    }
    > :last-child {
       bottom: 0;
-      margin-bottom: -3vh;
+      margin-top:-3vh;
    }
 `;
 
