@@ -15,11 +15,43 @@ export const AppIcon = styled.div`
     height: 5%;
     display: flex;
     margin-top: 8%;
+    @media (min-width: 375px){
+        margin-left:5%;
+    }
+    @media (min-width: 425px){
+        margin-left:5%;
+    }
+    @media (min-width: 768px){
+        margin-top:3%;
+    }
+    @media (min-width:1024px){
+        margin-left:10%
+    }
+    @media (max-width:1440px){
+       margin-top:1%;
+    }
 `;
 export const Icon = styled.img`
     width: 70px;
     height: 70px;
     border-radius: 18px;
+    @media (min-width: 375px){
+        width:80px;
+        height:80px;
+    }
+    @media (min-width: 425px){
+        width:90px;
+        height:90px;
+    }
+    @media (min-width: 768px){
+        width:150px;
+        height:150px;
+    }
+    @media (max-width:1440px){
+        width:200px;
+        height:200px;
+    }
+    
 `;
 export const AppInfo = styled.div`
     width: 70%;
@@ -42,18 +74,33 @@ export const AppPlatforms = styled.div`
 `;
 export const AppRating = styled.div`
     position: absolute;
-    top: 18%;
+    top: 20%;
     right: 58%;
     height: 10%;
     display: flex;
     gap: 10px;
+    @media (min-width: 425px){
+        position:relative;
+        margin-top:5%;
+        margin-left:57%
+    }
+    @media (min-width: 768px){
+        position:relative;
+        margin-top:2%;
+        margin-left:57%
+    }
 `;
 
 export const DescriptionDiv = styled.div`
     width:100%;
     max-height:150px;
     overflow:scroll;
-    
+    margin-top:5%;
+    @media (min-width:1024px){
+        width:100%;
+        height:100%;
+        overflow:visible;
+    }
 `;
 
 export const ImageDiv = styled.div`
@@ -61,10 +108,19 @@ export const ImageDiv = styled.div`
     height: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top:5%;
+    margin-top:10%;
+    @media (min-width:1024px){
+        margin-top:15%;
+    }
+    
 `;
 export const DisplayImage =styled.img`
     width: 100px;
     height: 200px;
-    border-radius: 15px;  
+    border-radius: 15px;
+    @media (min-width: 768px){
+        width:200px;
+        height:400px;
+        border-radius:15px;
+    }
 `;
