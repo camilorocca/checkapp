@@ -48,11 +48,20 @@ export const AppRating = styled.div`
     display: flex;
     gap: 10px;
 `;
+
+export const DescriptionDiv = styled.div`
+    width:100%;
+    max-height:150px;
+    overflow:scroll;
+    
+`;
+
 export const ImageDiv = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
+    margin-top:5%;
 `;
 export const DisplayImage =styled.img`
     width: 100px;
