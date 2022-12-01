@@ -27,7 +27,7 @@ export const AppIcon = styled.div`
     @media (min-width:1024px){
         margin-left:10%
     }
-    @media (max-width:1440px){
+    @media (min-width:1440px){
        margin-top:1%;
     }
 `;
@@ -47,7 +47,7 @@ export const Icon = styled.img`
         width:150px;
         height:150px;
     }
-    @media (max-width:1440px){
+    @media (min-width:1440px){
         width:200px;
         height:200px;
     }
@@ -70,6 +70,10 @@ export const AppPlatforms = styled.div`
         width: 25%;
         display: flex;
         justify-content: center;
+    }
+    @media (min-width: 768px){
+        width:50%;
+       
     }
 `;
 export const AppRating = styled.div`
