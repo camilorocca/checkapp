@@ -6,7 +6,7 @@ import {
   DropDownMenuContainer,
   DropDownItem,
 } from "./DropDown_Styled.js";
-import { MdOutlineArrowDropDown } from "react-icons/md";
+import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 
 const DropDown = () => {
   const [open, setOpen] = useState(false);
@@ -19,10 +19,11 @@ const DropDown = () => {
         </DrobDownButton>
 
         <DropDownMenu onClick={() => setOpen(!open)}>
-          {open == true ? (
+          {open === true ? (
             <DropDownMenuContainer>
               <DropDownItem>
-                <MdOutlineArrowDropDown />
+                <p>plataformas</p>
+                <MdOutlineArrowDropUp />
               </DropDownItem>
               <DropDownItem>
                 <input type="checkbox" id="cbox1" value="firstCheckbox" />

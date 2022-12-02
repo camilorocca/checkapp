@@ -47,6 +47,7 @@ export const DropDownMenuContainer = styled.div`
 export const DropDownItem = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   width: 100%;
   padding: 0 0 1rem 0;
@@ -54,6 +55,11 @@ export const DropDownItem = styled.div`
 
   &:first-of-type {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+  > input {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid black;
   }
 `;
