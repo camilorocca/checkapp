@@ -9,6 +9,7 @@ export const DropDownBox = styled.div`
 
   background-color: #fff4d6;
   border: 2px solid black;
+  border-top: none !important;
   color: black;
   width: auto;
   padding: 1rem;
@@ -22,11 +23,11 @@ export const DrobDownButton = styled.div`
 `;
 
 export const DropDownMenu = styled.div`
-  position: absolute;
+  ${'' /* position: absolute; */}
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  height: 3rem;
+  ${'' /* height: 3rem; */}
 `;
 
 export const DropDownMenuContainer = styled.div`
@@ -34,14 +35,9 @@ export const DropDownMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0 1rem 0rem 1rem;
 
   width: auto;
   height: auto;
-  border-width: 0px 2px 2px 2px;
-  border-style: solid;
-  border-color: #000000;
-  background: #fff4d6;
 `;
 
 export const DropDownItem = styled.div`
@@ -52,6 +48,7 @@ export const DropDownItem = styled.div`
   width: 100%;
   padding: 0 0 1rem 0;
   z-index: 1;
+  font-size: 1.2rem;
 
   &:first-of-type {
     display: flex;
@@ -60,6 +57,10 @@ export const DropDownItem = styled.div`
   > input {
     width: 1rem;
     height: 1rem;
-    border: 2px solid black;
-  }
+    outline: 1px solid grey;
+  }!
 `;
+
+export const DropDownContainer = styled.div`
+    height: auto;
+  `

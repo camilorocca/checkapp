@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const H1Title = styled.h1`
-  font-size: 1.5rem;
-  font-weight: 700;
-`;
 
 export const UploadAppContainer = styled.div`
   display: flex;
@@ -20,5 +16,9 @@ export const UploadAppBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
 `;
 

@@ -13,29 +13,30 @@ const DropDown = () => {
   return (
     <React.Fragment>
       <DropDownBox>
-        <DrobDownButton>
+        <DrobDownButton onClick={() => setOpen(!open)}>
           <p>plataformas</p>
-          <MdOutlineArrowDropDown />
+          {open === true ? (
+            <MdOutlineArrowDropUp />
+          ) : (
+            <MdOutlineArrowDropDown />
+          )}
         </DrobDownButton>
 
-        <DropDownMenu onClick={() => setOpen(!open)}>
+        <DropDownMenu>
           {open === true ? (
             <DropDownMenuContainer>
+              <DropDownItem></DropDownItem>
               <DropDownItem>
-                <p>plataformas</p>
-                <MdOutlineArrowDropUp />
+                <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                iOS
               </DropDownItem>
               <DropDownItem>
                 <input type="checkbox" id="cbox1" value="firstCheckbox" />
-                Link 1
+                Android
               </DropDownItem>
               <DropDownItem>
                 <input type="checkbox" id="cbox1" value="firstCheckbox" />
-                Link 1
-              </DropDownItem>
-              <DropDownItem>
-                <input type="checkbox" id="cbox1" value="firstCheckbox" />
-                Link 1
+                webkit
               </DropDownItem>
             </DropDownMenuContainer>
           ) : null}
