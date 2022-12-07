@@ -1,14 +1,19 @@
 import "./App_styled.js";
 import Router from "../src/router/Router";
-import GlobalStyle from "./globalStyles/globalStyles.js";
+import GlobalSyle from "./globalStyles/globalStyles.js";
+import { AppProvider } from "./context/AppContext";
 
 function App() {
-  return (
-    <div className="App">
-      <GlobalStyle />
-      <Router />
-    </div>
-  );
+   return (
+      <AppProvider>
+         <div className="App">
+            <GlobalSyle />
+            <Router />
+         </div>
+      </AppProvider>
+      
+      
+   );
 }
 
 export default App;

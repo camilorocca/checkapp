@@ -4,40 +4,38 @@ import { VscFlame } from "react-icons/vsc";
 
 const CategoryBox = () => {
   return (
-    <React.Fragment>
-      <ContainerCategoryBox>
-        <RowCategoryBox>
-          <button>
-            <VscFlame />
-            flames!
-          </button>
-          <button>
-            <VscFlame />
-            worst
-          </button>
-          <button>
-            <VscFlame />
-            social
-          </button>
-          <button>
-            <VscFlame />
-            games
-          </button>
-          <button>
-            <VscFlame />
-            wellness
-          </button>
-          <button>
-            <VscFlame />
-            buy
-          </button>
-          <button>
-            <VscFlame />
-            productivity
-          </button>
-        </RowCategoryBox>
-      </ContainerCategoryBox>
-    </React.Fragment>
+    <ContainerCategoryBox>
+      <RowCategoryBox>
+        <button>
+          <VscFlame />
+          flames!
+        </button>
+        <button>
+          <VscFlame />
+          worst
+        </button>
+        <button>
+          <VscFlame />
+          social
+        </button>
+        <button>
+          <VscFlame />
+          games
+        </button>
+        <button>
+          <VscFlame />
+          wellness
+        </button>
+        <button>
+          <VscFlame />
+          buy
+        </button>
+        <button>
+          <VscFlame />
+          productivity
+        </button>
+      </RowCategoryBox>
+    </ContainerCategoryBox>
   );
 };
 

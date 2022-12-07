@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
 body{
     
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-size: 1.5rem;
 }`
 
 export default GlobalStyle;
