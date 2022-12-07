@@ -27,7 +27,8 @@ function Router() {
             <Route path="/home" element={<Home/>} />
             <Route path="/filter" element={<Filter/>} />
             <Route path="/singleapp" element={<SingleApp />}/> 
-            <Route path="/filter" element={<Filter setSettingsFilter={setSettingsFilter} settignsFilter={settignsFilter}/>} />
+            
+  {/* <Route path="/filter" element={<Filter setSettingsFilter={setSettingsFilter} settignsFilter={settignsFilter}/>} />*/}
          </Routes>
       </BrowserRouter>
    );

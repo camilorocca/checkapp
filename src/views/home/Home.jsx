@@ -15,6 +15,7 @@ const Home = () => {
    console.log("jsonApp ", jsonApp)
    const [navOrSearch, setNavOrSearch] = useState(AppContext);
    return (
+      
       <React.Fragment>
          <ContainerHome>
             <HeaderHome>
@@ -44,6 +45,7 @@ const Home = () => {
          </ContainerHome>
          <h1></h1>
       </React.Fragment>
+      
    );
 };
 

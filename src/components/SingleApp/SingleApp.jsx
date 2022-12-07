@@ -14,6 +14,8 @@ import {
   DescriptionDiv,
 } from "./SingleApp_Style";
 import AppContext from "../../context/AppContext";
+import ShowAddComment from "../ShowAddComment/ShowAddComment";
+
 
  const SingleApp = () => {
 //   //Getting Data from Json
@@ -62,6 +64,7 @@ import AppContext from "../../context/AppContext";
         </ImageDiv>
       </SectionSingle>
       {/* })} */}
+      <ShowAddComment SingleApp={SingleApp}/>
     </div>
   );
 };

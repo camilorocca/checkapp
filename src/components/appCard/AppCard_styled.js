@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import {Link} from  "react-router-dom"
+
+export const AppCardLink = styled(Link) `
+   text-decoration: none ;
+   color: black;
+  `
 
 export const GeneralDiv = styled.div`
    width: 100%;
