@@ -1,4 +1,5 @@
-import React, { useState} from "react";
+import React, { useState , useContext} from "react";
+import AppContext from "../../context/AppContext";
 import {
    DetailedFilterContainer,
    FilterMenu,
@@ -11,8 +12,9 @@ import data from '../../data/dataApps.json'
 import { BsFilter } from "react-icons/bs";
 import { GiSettingsKnobs } from "react-icons/gi";
 
-const DetailedFilter = ({setSettingsFilter}) => {
+const DetailedFilter = () => {
 
+   const {setSettingsFilter} = useContext(AppContext)
 
    const [openFilter, setOpenFilter]= useState(false);
    
@@ -28,16 +30,16 @@ const DetailedFilter = ({setSettingsFilter}) => {
       const entertainment = document.getElementById("Entertainment")
       const videoEditor = document.getElementById("Video Players & Editors")
       let resultfilter = {
-         "web":`${web.checked}`,
-         "ios":`${ios.checked}`,
-         "android": `${android.checked}`,
-         "productivity": `${productivity.checked}`,
-         "lifeStyle" : `${lifeStyle.checked}`,
-         "social" : `${social.checked}`,
-         "photography" : `${photography.checked}`,
-         "tools" : `${tools.checked}`,
-         "entertainment" : `${entertainment.checked}`,
-         "videoEditor" : `${videoEditor.checked}`,
+         "web": web.checked,
+         "ios":ios.checked,
+         "android": android.checked,
+         "productivity": productivity.checked,
+         "lifeStyle" : lifeStyle.checked,
+         "social" : social.checked,
+         "photography" : photography.checked,
+         "tools" : tools.checked,
+         "entertainment" : entertainment.checked,
+         "videoEditor" : videoEditor.checked,
       }
       setSettingsFilter(resultfilter)
    }

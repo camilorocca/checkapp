@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ContainerHome, HeaderHome, SearchBarHome } from "./Home_styled";
+import AppContext from "../../context/AppContext";
 
 import NavBar from "../../components/navBar/NavBar";
 import SearchBar from "../../components/searchBar/SearchBar";
 import FilterForStars from "../../components/filterForStars/FilterForStars";
 import CategoryBox from "../../components/categoryBox/CategoryBox";
 
+
 const Home = () => {
-   const [navOrSearch, setNavOrSearch] = useState(false);
+
+   const {jsonApp} = useContext(AppContext)
+
+   console.log("jsonApp ", jsonApp)
+   const [navOrSearch, setNavOrSearch] = useState(AppContext);
    return (
       <React.Fragment>
          <ContainerHome>
@@ -36,6 +42,7 @@ const Home = () => {
             </SearchBarHome>
             <CategoryBox></CategoryBox>
          </ContainerHome>
+         <h1></h1>
       </React.Fragment>
    );
 };
