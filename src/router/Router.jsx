@@ -1,12 +1,24 @@
 import React, {useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from '../views/home/Home';
 import Filter from "../views/filter/Filter";
 import SingleApp from "../components/SingleApp/SingleApp";
 
 function Router() {
 
-   const [dataApp, setDataApp] = useState(); 
+      const [settignsFilter, setSettingsFilter] = useState({
+         "web":``,
+         "ios":``,
+         "android": ``,
+         "productivity": ``,
+         "lifeStyle" : ``,
+         "social" : ``,
+         "photography" : ``,
+         "tools" : ``,
+         "entertainment" : ``,
+         "videoEditor" : ``,
+      })
 
    return (
       <BrowserRouter>
@@ -15,6 +27,7 @@ function Router() {
             <Route path="/home" element={<Home/>} />
             <Route path="/filter" element={<Filter/>} />
             <Route path="/singleapp" element={<SingleApp dataApp={dataApp}/>}/> 
+            <Route path="/filter" element={<Filter setSettingsFilter={setSettingsFilter} settignsFilter={settignsFilter}/>} />
          </Routes>
       </BrowserRouter>
    );

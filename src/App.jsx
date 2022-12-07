@@ -1,14 +1,18 @@
-import './App_styled.js';
-import Router from '../src/router/Router'
-import AppCard from './components/AppCard/AppCard.jsx';
-import SingleApp from './components/SingleApp/SingleApp.jsx';
-import CompareApp from './components/CompareApp/CompareApp.jsx';
+import "./App_styled.js";
+import Router from "../src/router/Router";
+import GlobalSyle from "./globalStyles/globalStyles.js";
+import { AppProvider } from "./context/AppContext";
+
 function App() {
-  return (
-    <div className="App">
-      <CompareApp/>
-    </div>
-  );
+   return (
+      <AppProvider>
+         <div className="App">
+            <GlobalSyle />
+            <Router />
+         </div>
+      </AppProvider>
+      
+   );
 }
 
 export default App;
