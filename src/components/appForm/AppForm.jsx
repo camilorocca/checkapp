@@ -1,26 +1,107 @@
-import React from "react";
-import AppNameInput from "../appNameInput/AppNameInput";
-import DropDown from "../dropDown/DropDown";
-import LoadAppIcon from "../loadAppIcon/LoadAppIcon";
-import { DropDownContainer } from "../dropDown/DropDown_Styled";
-import { Container } from "./AppForm_Styled";
-import AppDescriptionTextArea from "../appDescriptionTextArea/AppDescriptionTextArea";
-import LoadAppScreens from "../loadAppScreens/LoadAppScreens";
+import React, { useState } from "react";
+import {
+  TextField,
+  UploadAppContainer,
+  UploadAppBox,
+  Container,
+  DropDownContainer,
+  DropDownBox,
+  DropDownButton,
+  DropDownMenu,
+  DropDownMenuContainer,
+  DropDownItem,
+  AppDescription,
+  ContainerScreens,
+  UploadAppScreen,
+} from "./AppForm_Styled";
 import Button from "../button/Button";
+import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
+import { BiImageAlt } from "react-icons/bi";
 
-const AppUpload = () => {
+const AppForm = () => {
+  const [selectPlatform, setSelectPlatform] = useState(false);
+  const [selectCategory, setSelectCategory] = useState(false);
+
   return (
     <React.Fragment>
-      <AppNameInput />
-      <LoadAppIcon />
+      <TextField placeholder="Your App name" />
+      <UploadAppContainer>
+        <UploadAppBox>
+          <BiImageAlt />
+        </UploadAppBox>
+      </UploadAppContainer>
       <Container>
         <DropDownContainer>
-          <DropDown />
-          <DropDown />
+          <DropDownBox>
+            <DropDownButton onClick={() => setSelectPlatform(!selectPlatform)}>
+              <p>plataformas</p>
+              {selectPlatform === true ? (
+                <MdOutlineArrowDropUp />
+              ) : (
+                <MdOutlineArrowDropDown />
+              )}
+            </DropDownButton>
+
+            <DropDownMenu>
+              {selectPlatform === true ? (
+                <DropDownMenuContainer>
+                  <DropDownItem></DropDownItem>
+                  <DropDownItem>
+                    <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                    iOS
+                  </DropDownItem>
+                  <DropDownItem>
+                    <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                    Android
+                  </DropDownItem>
+                  <DropDownItem>
+                    <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                    webkit
+                  </DropDownItem>
+                </DropDownMenuContainer>
+              ) : null}
+            </DropDownMenu>
+          </DropDownBox>{" "}
+          <DropDownBox>
+            <DropDownButton onClick={() => setSelectCategory(!selectCategory)}>
+              <p>plataformas</p>
+              {selectCategory === true ? (
+                <MdOutlineArrowDropUp />
+              ) : (
+                <MdOutlineArrowDropDown />
+              )}
+            </DropDownButton>
+
+            <DropDownMenu>
+              {selectCategory === true ? (
+                <DropDownMenuContainer>
+                  <DropDownItem></DropDownItem>
+                  <DropDownItem>
+                    <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                    iOS
+                  </DropDownItem>
+                  <DropDownItem>
+                    <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                    Android
+                  </DropDownItem>
+                  <DropDownItem>
+                    <input type="checkbox" id="cbox1" value="firstCheckbox" />
+                    webkit
+                  </DropDownItem>
+                </DropDownMenuContainer>
+              ) : null}
+            </DropDownMenu>
+          </DropDownBox>
         </DropDownContainer>
       </Container>
-      <AppDescriptionTextArea />
-      <LoadAppScreens />
+      <AppDescription>
+        <textarea placeholder={"Describe the app here..."}></textarea>
+      </AppDescription>{" "}
+      <ContainerScreens>
+        <UploadAppScreen>
+          <BiImageAlt />
+        </UploadAppScreen>
+      </ContainerScreens>
       <Container>
         <Button />
       </Container>
@@ -28,6 +109,4 @@ const AppUpload = () => {
   );
 };
 
-
-
-export default AppUpload;
+export default AppForm;
