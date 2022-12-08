@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect } from "react";
+import React, {useContext } from "react";
 import {
    ContainerApps,
    ContainerFilter,
@@ -25,7 +25,7 @@ const Container_Apps = () => {
             ></DetailedFilter>
          </ContainerFilter>
          <Banner>
-            <h2>Today algo</h2>
+            <h2>Today in...</h2><p> Best apps</p>
          </Banner>
          <Cards>
             {filtro(DataApps).map((i) => {
