@@ -1,41 +1,33 @@
 import styled from "styled-components"
 
 export const CommentBoxContainer = styled.div`
-height:100vh;
-padding-left: 15px;
-
+margin:2rem 0rem;
  >p{
-  margin-top: 15px;
-  font-size: 20px;
-  
+  font-size: 1.2rem;
   }
-  ;
   `
   
 export const ContainerPersonAndFirst = styled.div`
   display: flex;
-  font-size: 25px;
   gap:15px;
-  align-items: center;
   `
 
 export const PersonContainer = styled.div`
- font-size: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+ font-size: 2.1rem;
  `
 
 export const FirstContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    font-size:20px;
-    margin-left: 70px;
+
     `
     
 
 export const SecondContainer = styled.div`
     display: flex;
-    margin-top: 15px;
     font-size: 20px;
+    padding:0.2rem 0;
     align-items: center;
     >SVG{display: flex;
     font-size: 20px;

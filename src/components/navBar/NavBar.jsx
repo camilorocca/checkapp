@@ -38,16 +38,16 @@ const NavBar = ({ navOrSearch, setNavOrSearch }) => {
                <GrClose onClick={() => setMenu(!menu)} />
                <ul>
                   <li>
-                     <LinkMenu>Login</LinkMenu>
+                     <LinkMenu to="/home">Home</LinkMenu>
                   </li>
                   <li>
-                     <LinkMenu>Add Your App</LinkMenu>
+                     <LinkMenu to="/filter">Apps</LinkMenu>
                   </li>
                   <li>
-                     <LinkMenu>Edit / Remove</LinkMenu>
+                     <LinkMenu to="/uploadform">Add new app</LinkMenu>
                   </li>
                   <li>
-                     <LinkMenu>About</LinkMenu>
+                     <LinkMenu to ="/editform">Edit / Remove</LinkMenu>
                   </li>
                </ul>
             </Menu>

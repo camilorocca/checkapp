@@ -9,6 +9,7 @@ export const ContainerNavBar = styled(motion.div)`
    width: calc((100% - 4px) - 2rem);
    height: 5vh;
    padding: 0.5rem 1rem;
+   border:2px solid black;
    position: fixed;
    background-color: ${huesMain.hues02};
    display: flex;

@@ -19,6 +19,7 @@ align-items:center;
 
 export const Banner = styled.div`
 width:calc(100% - 2rem);
+gap:1rem;
 height:5vh;
 color:black;
 background-color:${brandColours.mainColor};
@@ -29,11 +30,14 @@ align-items: center;
 
 export const Cards = styled.div`
 width:calc(100% - 4px);
+
+${props => props.inFilter ? "background-color: white; border-bottom:2px solid black;" :null}
 display:grid;
 grid-gap:0.2rem;
 @media(min-width:700px){
     grid-template-columns: auto auto;
 }
+
 @media(min-width:1000px){
     grid-template-columns: auto auto auto;
 }
