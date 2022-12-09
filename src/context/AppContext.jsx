@@ -23,9 +23,11 @@ export const AppProvider = ({ children }) => {
    const [jsonApp, setJsonApp] = useState(initialData);
    const [settingsFilter, setSettingsFilter] = useState(initialSettings);
 
+
    // super filtro
 
    function filtro(apps) {
+
     let activeSettings = Object.filter(settingsFilter, function (setting) {
       return setting == true;
      });
@@ -35,6 +37,7 @@ export const AppProvider = ({ children }) => {
      console.log("active settings", activeSettings)
      
      let result = [];
+
      console.log("el objeto inicial", result)
 
      if (activeSettings.length > 0) {
@@ -57,18 +60,49 @@ export const AppProvider = ({ children }) => {
      //si el condicional no funciona regresamos el array original
      return result;
   }
+  
 
-   
+
+     //filter by stars
+     const [tabActiveYeah, setTabActiveYeah] = useState(false);
+     const [tabActiveMeh, setTabActiveMeh] = useState(false);
+     const [tabActiveBooh, setTabActiveBooh] = useState(false);
+
+     function activeTab(option) {
+      if (option == "yeah") {
+         setTabActiveYeah(true);
+         setTabActiveMeh(false);
+         setTabActiveBooh(false);
+      }
+      if (option == "meh") {
+         setTabActiveYeah(false);
+         setTabActiveMeh(true);
+         setTabActiveBooh(false);
+      }
+      if (option == "booh") {
+         setTabActiveYeah(false);
+         setTabActiveMeh(false);
+         setTabActiveBooh(true);
+      }
+   }
 
    const [SingleApp, setSingleApp] = useState();
 
    const data = {
       jsonApp,
+      setJsonApp,
       setSettingsFilter,
       settingsFilter,
       filtro,
       SingleApp,
       setSingleApp,
+      tabActiveBooh,
+      tabActiveMeh,
+      tabActiveYeah,
+      setTabActiveBooh,
+      setTabActiveMeh,
+      setTabActiveYeah,
+      activeTab,
    };
 
    return <AppContext.Provider value={data}>{children}</AppContext.Provider>;

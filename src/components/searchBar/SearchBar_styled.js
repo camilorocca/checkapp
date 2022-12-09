@@ -6,7 +6,7 @@ export const ContainerSearchBar = styled(motion.div)`
     height:100vh;
    ${props=> props.noBlock == true ? "height:auto;" : null}
     width:100%;
-    z-index:3;
+    z-index:5;
     position:fixed;
     
    > form {

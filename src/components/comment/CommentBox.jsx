@@ -16,7 +16,7 @@ const CommentBox = ({user,comment}) => {
        </PersonContainer>
        <FirstContainer>
           <h4>
-          {comment}
+          {user}
           </h4>
           <p>
           14 diciembre 2022

@@ -12,11 +12,40 @@ import AppContext from "../../context/AppContext";
 
 const Container_Apps = () => {
 
-   const {filtro} = useContext(AppContext)
+   const {filtro, jsonApp,tabActiveBooh, tabActiveMeh, tabActiveYeah} = useContext(AppContext)
 
-   let DataApps = data.data.apps;
+   function filterByStars(apps){
 
-   console.log("filtro", filtro(DataApps));
+      let result = apps;
+      // let newArray =[]
+      if(tabActiveBooh == true){
+         let bohApps = apps.filter( app => app.rating <= 2);
+         console.log("esto es boh apps",bohApps)
+         return bohApps
+         // result.filter(app => app.rating === 2)
+         // console.log("boh", result)
+         // return result
+      }
+      else if(tabActiveMeh == true){
+         let mehApps = apps.filter( app => app.rating === 3);
+         return mehApps
+         // return result
+      }
+      else if(tabActiveYeah == true){
+          let yeahApps = apps.filter( app => app.rating >= 4);
+         return yeahApps
+      }
+      else {
+         return result
+      }
+     }
+
+   let DataApps = filterByStars(jsonApp);
+   console.log("resultado de data apps",DataApps)
+
+   // console.log("filtro", filtro(DataApps));
+
+   
 
    return (
       <ContainerApps>
@@ -25,9 +54,13 @@ const Container_Apps = () => {
             ></DetailedFilter>
          </ContainerFilter>
          <Banner>
-            <h2>Today in...</h2><p> Best apps</p>
+            <h2>Today in...</h2>
+            {tabActiveBooh ? <p>Booh</p> : null}
+            {tabActiveMeh ? <p>Meh</p> : null}
+            {tabActiveYeah ? <p>Yeah!!</p> : null}
          </Banner>
          <Cards>
+            
             {filtro(DataApps).map((i) => {
                return <AppCard dataApp={i} key={i.app_id} />;
             })}
