@@ -10,6 +10,7 @@ import {
 import { AiFillStar } from "react-icons/ai";
 import AppContext from "../../context/AppContext";
 import { useContext } from "react";
+import ImageDefault from '../../assets/images/cover-japonese-green.jpg'
 
 
 const AppCard = ({ dataApp }) => {
@@ -22,7 +23,7 @@ const AppCard = ({ dataApp }) => {
        <AppCardLink to = "/singleapp"> 
          <GeneralDiv onClick={modifySingleApp}>
             <IconImg>
-               <img src={dataApp.app_icon} />
+               <img src={dataApp.app_icon ? dataApp.app_icon : ImageDefault} />
             </IconImg>
             <InfoApp>
                <h4>{dataApp.app_name}</h4>

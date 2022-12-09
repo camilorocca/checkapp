@@ -16,6 +16,7 @@ import { AiFillStar } from "react-icons/ai";
 import ShowAddComment from "../ShowAddComment/ShowAddComment";
 import { Platforms, Rating } from "../appCard/AppCard_styled";
 import { MainButton } from "../button/Button_styled";
+import ImageDefault from '../../assets/images/cover-japonese-green.jpg'
 
 const SingleApp = () => {
 
@@ -49,6 +50,7 @@ const SingleApp = () => {
             <AppSingle>
                <AppIcon>
                   <img src={SingleApp.app_icon} />
+                  <img src={SingleApp.app_icon ? SingleApp.app_icon : ImageDefault} />
                </AppIcon>
                <AppInfo>
                   <h4>{SingleApp.app_name}</h4>
