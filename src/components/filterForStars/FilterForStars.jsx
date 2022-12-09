@@ -1,33 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { ContainerFilter, TabFilter } from "./FilterForStars_styled";
 import Yeah from "../../assets/svg/YEAH.svg";
 import Meh from "../../assets/svg/MEH.svg";
 import Booh from "../../assets/svg/BOOH.svg";
-
+import AppContext from "../../context/AppContext";
 
 const FilterForStars = () => {
-   const [tabActiveYeah, setTabActiveYeah] = useState(false);
-   const [tabActiveMeh, setTabActiveMeh] = useState(false);
-   const [tabActiveBooh, setTabActiveBooh] = useState(false);
-
-   function activeTab(option) {
-      if (option == "yeah") {
-         setTabActiveYeah(true);
-         setTabActiveMeh(false);
-         setTabActiveBooh(false);
-      }
-      if (option == "meh") {
-         setTabActiveYeah(false);
-         setTabActiveMeh(true);
-         setTabActiveBooh(false);
-      }
-      if (option == "booh") {
-         setTabActiveYeah(false);
-         setTabActiveMeh(false);
-         setTabActiveBooh(true);
-      }
-   }
+   const { tabActiveYeah,
+       tabActiveMeh,
+        tabActiveBooh,
+        activeTab } =
+      useContext(AppContext);
 
    return (
       <ContainerFilter>

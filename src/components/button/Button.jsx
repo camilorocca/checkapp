@@ -2,10 +2,10 @@ import React from "react";
 import { MainButton } from "./Button_styled";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const Button = () => {
+const Button = (sumbit , {uploadNewApp}) => {
   return (
     <React.Fragment>
-      <MainButton>
+      <MainButton onClick={()=> uploadNewApp()}>
         Longer Text
         <AiOutlineArrowRight />
       </MainButton>

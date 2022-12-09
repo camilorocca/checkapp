@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from '../views/home/Home';
 import Filter from "../views/filter/Filter";
-import SingleApp from "../components/SingleApp/SingleApp";
 import AppUploadForm from "../views/appUploadForm/AppUploadForm";
+import AppEditForm from '../views/appEditForm/AppEditForm'
+import SingleAppView from "../views/SingleAppView/SingleAppView";
 
 function Router() {
 
@@ -27,8 +28,9 @@ function Router() {
             <Route path="/" element={<Home/>} />
             <Route path="/home" element={<Home/>} />
             <Route path="/filter" element={<Filter />} />
-            <Route path="/loadForm" element={<AppUploadForm/>} />
-            <Route path="/singleapp" element={<SingleApp />}/> 
+            <Route path="/uploadform" element={<AppUploadForm/>} />
+            <Route path="/singleapp" element={<SingleAppView />}/> 
+            <Route path="/editform" element={<AppEditForm/>}/> 
             
   {/* <Route path="/filter" element={<Filter setSettingsFilter={setSettingsFilter} settignsFilter={settignsFilter}/>} />*/}
          </Routes>

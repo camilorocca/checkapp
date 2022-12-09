@@ -30,16 +30,16 @@ const DetailedFilter = () => {
       const entertainment = document.getElementById("Entertainment")
       const videoEditor = document.getElementById("Video Players & Editors")
       let resultfilter = {
-         "web": web.checked,
-         "ios":ios.checked,
-         "android": android.checked,
-         "productivity": productivity.checked,
-         "lifeStyle" : lifeStyle.checked,
-         "social" : social.checked,
-         "photography" : photography.checked,
-         "tools" : tools.checked,
-         "entertainment" : entertainment.checked,
-         "videoEditor" : videoEditor.checked,
+         // "web": web.checked,
+         // "ios":ios.checked,
+         // "android": android.checked,
+         "Productivity": productivity.checked,
+         "LifeStyle" : lifeStyle.checked,
+         "Social" : social.checked,
+         "Photography" : photography.checked,
+         "Tools" : tools.checked,
+         "Entertainment" : entertainment.checked,
+         "Video Players & Editors" : videoEditor.checked,
       }
       setSettingsFilter(resultfilter)
    }
