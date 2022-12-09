@@ -49,7 +49,6 @@ const SingleApp = () => {
          <SectionSingle>
             <AppSingle>
                <AppIcon>
-                  <img src={SingleApp.app_icon} />
                   <img src={SingleApp.app_icon ? SingleApp.app_icon : ImageDefault} />
                </AppIcon>
                <AppInfo>

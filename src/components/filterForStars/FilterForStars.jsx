@@ -25,7 +25,7 @@ const FilterForStars = () => {
          </TabFilter>
          <TabFilter isActive={tabActiveBooh} onClick={() => activeTab("booh")}>
             <img src={Booh} alt="OptionYeah" />
-            <h2 color="white">BOOH!</h2>
+            <h2  style={{color:white }}>BOOH!</h2>
          </TabFilter>
       </ContainerFilter>
    );
