@@ -63,6 +63,5 @@ background-color:gray;
       color: ${brandColours.mainColor};
       font-family: "bangers";
       letter-spacing: 0.2rem;
-      ${props => props.color == "white" ? "color white;" : null}
    }
 `;

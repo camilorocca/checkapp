@@ -9,7 +9,7 @@ import CategoryBox from "../../components/categoryBox/CategoryBox";
 
 const Home = () => {
 
-   const [navOrSearch, setNavOrSearch] = useState(false);
+   const [navOrSearch, setNavOrSearch] = useState(true);
 
    return (
       
