@@ -16,8 +16,10 @@ export const AppIcon = styled.div`
    justify-content: center;
 
    > img {
-      width: 70%;
-      height: auto;
+      width:15vh;
+      height:15vh;
+      max-width: 150px;
+      max-height:150px;
       border-radius: 18px;
    }
    /* @media (min-width: 375px){

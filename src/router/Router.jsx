@@ -6,21 +6,9 @@ import Filter from "../views/filter/Filter";
 import AppUploadForm from "../views/appUploadForm/AppUploadForm";
 import AppEditForm from '../views/appEditForm/AppEditForm'
 import SingleAppView from "../views/SingleAppView/SingleAppView";
+import CompareApp from "../components/CompareApp/CompareApp"
 
 function Router() {
-
-      const [settignsFilter, setSettingsFilter] = useState({
-         "web":``,
-         "ios":``,
-         "android": ``,
-         "productivity": ``,
-         "lifeStyle" : ``,
-         "social" : ``,
-         "photography" : ``,
-         "tools" : ``,
-         "entertainment" : ``,
-         "videoEditor" : ``,
-      })
 
    return (
       <BrowserRouter>
@@ -31,8 +19,7 @@ function Router() {
             <Route path="/uploadform" element={<AppUploadForm/>} />
             <Route path="/singleapp" element={<SingleAppView />}/> 
             <Route path="/editform" element={<AppEditForm/>}/> 
-            
-  {/* <Route path="/filter" element={<Filter setSettingsFilter={setSettingsFilter} settignsFilter={settignsFilter}/>} />*/}
+            <Route path="/compareapp" element={<CompareApp/>}/>
          </Routes>
       </BrowserRouter>
    );
